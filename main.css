@@ -1,0 +1,383 @@
+:root {
+  --primary-color: #ea2845;
+  --primary-accent-color: #ea2868;
+  --primary-gradient: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-accent-color) 100%);
+}
+
+html {
+  position: relative;
+  font-size: 14px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #ababb1;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  outline: 0 !important;
+}
+
+div[data-lastpass-icon-root] {
+  display: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  color: #fff;
+}
+
+.gradient-svg {
+  position: absolute;
+}
+
+.primary-color {
+  color: #ea2845;
+}
+
+h1, h2, h3 {
+  color: #fff;
+}
+
+.btn {
+  border: 0;
+  color: #fff;
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  padding: 2px;
+  background: var(--primary-gradient);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.btn-primary span {
+  z-index: 3;
+  position: relative;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background: transparent;
+}
+
+.btn-primary:hover:not(:disabled) span, .btn-primary:not(:disabled):active span, .btn-primary:not(:disabled):focus span {
+  color: var(--primary-color);
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-primary:disabled {
+  background: #1d1d20;
+}
+
+.btn-primary:disabled::before {
+  background: #1d1d20;
+}
+
+.btn-primary:disabled span {
+  color: #ababb1;
+}
+
+.btn-primary.btn-success:disabled {
+  background: #36b285;
+}
+
+.btn-primary.btn-success:disabled::before {
+  background: #36b285;
+}
+
+.btn-primary:disabled span {
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #0e0e0f;
+  font-size: 1rem;
+  padding: 8px 24px;
+}
+
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus {
+  background: #cfcfcf;
+  color: #0e0e0f;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.background-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+  background: url("img/bg.svg") repeat center center fixed;
+
+  img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    pointer-events: none;
+  }
+}
+
+.marketing-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0 8px;
+  margin-bottom: auto;
+}
+
+.logo-wrapper img {
+  width: 50px;
+  pointer-events: none;
+}
+
+.already-subscribed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.already-subscribed p {
+  margin: 0;
+}
+
+.already-subscribed .btn {
+  margin-left: 24px;
+}
+
+.marketing-text-container {
+  font-size: 1.1rem;
+  margin-top: -16px;
+}
+
+.marketing-text-container h1 {
+  font-size: 2.7rem;
+  line-height: 3.4rem;
+  max-width: 480px;
+  margin-top: 0;
+  letter-spacing: -1px;
+}
+
+.marketing-text-container h1 span {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.marketing-text-container ul {
+  list-style-type: none;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+.marketing-text-container ul .icon {
+  color: var(--primary-color);
+}
+
+.marketing-text-container li {
+  line-height: 24px;
+  margin: 1.1em 0;
+}
+
+.marketing-text-container strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.fa-li {
+  top: 3px;
+  font-size: 18px;
+}
+
+.form-container {
+  position: relative;
+  padding: 40px;
+  font-size: 1.1rem;
+  box-shadow: 0 0 32px rgb(234 40 104 / 26%);
+}
+
+.form-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  padding: 3px;
+  background: var(--primary-gradient);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.form-container button {
+  width: 100%;
+}
+
+.form-container h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form-container p {
+  line-height: 30px;
+  margin-top: 8px;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 0;
+  background: #fff;
+  color: #212124;
+  margin-bottom: 12px;
+  margin-top: 16px;
+}
+
+.marketing-page-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 0 24px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.social-links a {
+  color: #ababb1;
+  font-size: 1.4rem;
+  margin-left: 8px;
+}
+
+.social-links a:first-of-type {
+  margin-left: 0;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+.marketing-page-footer a {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.marketing-page-footer a:hover {
+  background: #fff;
+  -webkit-background-clip: text;
+}
+
+@media (max-height: 679px) {
+  .page-container {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .page-container {
+    text-align: center;
+    padding: 80px 0;
+  }
+
+  .marketing-text-container h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .fa-li {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+    font-size: 20px;
+  }
+
+  .marketing-text-container li {
+    margin-top: 4em;
+  }
+
+  .marketing-text-container ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .form-container {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 13px;
+  }
+
+  .form-container {
+    padding: 30px;
+  }
+
+  .already-subscribed p {
+    display: none;
+  }
+
+  .marketing-text-container h1 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  .social-links a {
+    margin-left: 3px;
+  }
+}
