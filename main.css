@@ -239,7 +239,7 @@ h1, h2, h3 {
   position: relative;
   padding: 40px;
   font-size: 1.1rem;
-  box-shadow: 0 0 32px rgb(234 40 104 / 26%);
+  box-shadow: 0 0 32px 6px rgb(234 40 104 / 26%);
 }
 
 .form-container::before {
