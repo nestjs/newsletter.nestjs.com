@@ -17,6 +17,7 @@ window.addEventListener('load', function() {
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.onreadystatechange = function() {
         newsletterAddButton.classList.add('btn-success');
+        newsletterAddButton.innerHTML = 'Subscribed';
       };
       
       const data = JSON.stringify({ email: value });
