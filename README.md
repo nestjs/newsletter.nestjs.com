@@ -24,7 +24,7 @@
 
 ## Description
 
-Repository contains [newsletter.nestjs.com](https://newsletter.nestjs.com) source code, the official Nest website subpage.
+Repository contains [newsletter.nestjs.com](https://newsletter.nestjs.com) source code, the official Nest website for the newsletter.
 
 ## Developing
 
