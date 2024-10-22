@@ -321,6 +321,62 @@ h1, h2, h3 {
   -webkit-background-clip: text;
 }
 
+#unsubscribe-dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  transition: all 0.2s;
+  opacity: 1.0;
+}
+
+#unsubscribe-dialog.invisible {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dialog {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  padding: 40px;
+  box-shadow: 0 0 32px 6px rgb(234 40 104 / 26%);
+  background: #000;
+}
+  
+.dialog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  padding: 3px;
+  background: var(--primary-gradient);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.dialog-header h2 {
+  margin: 0;
+}
+
+.dialog-content {
+  margin: 24px 0 28px;
+  line-height: 25px;
+}
+
+.dialog-footer {
+  text-align: right;
+}
+
 @media (max-height: 679px) {
   .page-container {
     padding: 80px 0;
