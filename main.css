@@ -10,8 +10,8 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  color: #ababb1;
+  font-family: "Manrope", sans-serif;
+  color: #97979f;
   font-size: 14px;
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
@@ -44,6 +44,10 @@ a:active {
   color: #ea2845;
 }
 
+h1, h2 {
+  font-weight: 800;
+}
+
 h1, h2, h3 {
   color: #fff;
 }
@@ -57,7 +61,7 @@ h1, h2, h3 {
   -webkit-border-radius: 4px;
   text-transform: uppercase;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .btn-primary {
@@ -108,7 +112,7 @@ h1, h2, h3 {
 }
 
 .btn-primary:disabled span {
-  color: #ababb1;
+  color: #97979f;
 }
 
 .btn-primary.btn-success:disabled {
@@ -197,7 +201,7 @@ h1, h2, h3 {
 }
 
 .marketing-text-container h1 {
-  font-size: 2.7rem;
+  font-size: 3rem;
   line-height: 3.4rem;
   max-width: 480px;
   margin-top: 0;
@@ -227,7 +231,7 @@ h1, h2, h3 {
 
 .marketing-text-container strong {
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .fa-li {
@@ -240,13 +244,14 @@ h1, h2, h3 {
   padding: 40px;
   font-size: 1.1rem;
   box-shadow: 0 0 32px 6px rgb(234 40 104 / 26%);
+  border-radius: 24px;
 }
 
 .form-container::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 4px;
+  border-radius: 16px;
   padding: 3px;
   background: var(--primary-gradient);
   -webkit-mask: 
@@ -265,23 +270,35 @@ h1, h2, h3 {
 .form-container h2 {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 24px;
 }
 
 .form-container p {
-  line-height: 30px;
+  line-height: 24px;
   margin-top: 8px;
+  font-size: 15px;
 }
 
 .form-control input {
   width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 4px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  border-radius: 0;
   border: 0;
-  background: #fff;
-  color: #212124;
-  margin-bottom: 12px;
-  margin-top: 16px;
+  background: transparent;
+  border-bottom: 1px solid #333;
+  color: #fff;
+  margin-bottom: 16px;
+  margin-top: 4px;
+}
+
+.form-control input::placeholder {
+  color: #64646a;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-bottom-color: var(--primary-color);
 }
 
 .marketing-page-footer {
@@ -296,7 +313,7 @@ h1, h2, h3 {
 }
 
 .social-links a {
-  color: #ababb1;
+  color: #97979f;
   font-size: 1.4rem;
   margin-left: 8px;
 }
@@ -313,7 +330,7 @@ h1, h2, h3 {
   background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .marketing-page-footer a:hover {
@@ -343,7 +360,7 @@ h1, h2, h3 {
   max-width: 640px;
   margin: 0 auto;
   position: relative;
-  padding: 40px;
+  padding:  64px 48px;
   box-shadow: 0 0 32px 6px rgb(234 40 104 / 26%);
   background: #000;
 }
@@ -352,7 +369,7 @@ h1, h2, h3 {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 4px;
+  border-radius: 16px;
   padding: 3px;
   background: var(--primary-gradient);
   -webkit-mask: 
