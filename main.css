@@ -200,7 +200,7 @@ h1, h2, h3 {
 }
 
 .marketing-text-container h1 {
-  font-size: 3rem;
+  font-size: 2.9rem;
   line-height: 3.4rem;
   max-width: 480px;
   margin-top: 0;
@@ -208,9 +208,9 @@ h1, h2, h3 {
 }
 
 .marketing-text-container h1 span {
-  background: var(--primary-gradient);
+  /* background: var(--primary-gradient);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 .marketing-text-container ul {
