@@ -215,8 +215,8 @@ h1, h2, h3 {
 
 .marketing-text-container ul {
   list-style-type: none;
-  margin-top: 2.5em;
-  margin-bottom: 2.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .marketing-text-container ul .icon {
@@ -293,7 +293,7 @@ h1, h2, h3 {
 }
 
 .form-control input::placeholder {
-  color: #64646a;
+  color: #6b6b73;
 }
 
 .form-control input:focus {
